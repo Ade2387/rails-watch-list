@@ -4,27 +4,14 @@
   </div>
 </div>
 
-<div class="cards">
-  <% @lists.each do |list| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <%= link_to list.name, list_path(list) %>
+<div class="container">
+  <div class="row mt-5">
+      <% @lists.each do |list| %>
+        <div class="col-4">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://cdn.pixabay.com/photo/2019/08/18/19/40/la-4414887_1280.jpg')">
+            <%= link_to list.name, list_path(list) %>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    Lunch
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-    Dinner
-  </div>
 </div>
-
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %>
-        <%# <%= link_to '🗑', list_path(list),
-        method: :delete,
-        data: { confirm: "Are you sure?" } %></li>
-  <% end %>
-</ul>
