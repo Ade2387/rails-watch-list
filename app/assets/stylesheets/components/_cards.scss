@@ -41,10 +41,10 @@
 
 
 .movie-card-image {
-  height: 400px;
+  height: 800px;
   background-position: center;
   background-size: cover;
-  object-fit: cover;
+  object-fit: cover !important;
 }
 
 .movie-card {
