@@ -41,7 +41,7 @@
 
 
 .movie-card-image {
-  height: 800px;
+  height: 500px;
   background-position: center;
   background-size: cover;
   object-fit: cover !important;
@@ -58,6 +58,8 @@
 
 .movie-card-content {
   padding: 10px 10px 0px;
+  height: 270px;
+  overflow: scroll;
 }
 
 .movie-card-title {
