@@ -16,20 +16,21 @@
     <div class="row">
       <% @list.movies.each do |movie| %>
         <div class="col-md-4">
-          <div class="movie-card" data-controller="card" data-action="hoverDelete">
+          <div class="movie-card" data-controller="card" data-action="mouseover->card#hoverDelete mouseout->card#hoverDelete">
             <div class="movie-card-image" style="background-image: url('<%= movie.poster_url %>')">
             </div>
             <div class="movie-card-content">
               <div class="movie-card-title">
                 <h4><%= movie.title %></h4>
               </div>
-            </div>
-            <div class="movie-card-actions">
+              <h5>Overview:</h5>
               <%= movie.overview %>
               <% movie.bookmarks.each do |bookmark| %>
                 <br>
-                <span><%= bookmark.comment %></span>
-                <%= link_to "+", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "card-remove-link" %>
+                  <div class="bookmark-comment">
+                    <span><%= bookmark.comment %></span>
+                  </div>
+                  <span><%= link_to "+", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?", "card-target"=>"delete"}, class: "card-remove-link"%></span>
               <% end %>
             </div>
           </div>

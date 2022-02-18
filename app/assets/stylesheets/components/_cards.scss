@@ -56,6 +56,19 @@
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.89);
 }
 
+.movie-card-content {
+  padding: 10px 10px 0px;
+}
+
+.movie-card-title {
+  font-weight: bold;
+}
+
+.bookmark-comment {
+  padding-top: 3px;
+  font-size: 13px;
+}
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -76,7 +89,6 @@
   color: white;
   border-radius: 50%;
   border: 1px solid white;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 20px;
@@ -84,13 +96,14 @@
   position: absolute;
   right: 5px;
   top: 5px;
+  display: flex;
   opacity: 0;
   transform: rotate(45deg);
   font-weight: lighter;
   text-decoration: none;
-  &:hover {
-    color: white;
-    text-decoration: none;
-    opacity: 1;
-  }
+}
+
+.hover {
+  color: white;
+  opacity: 1;
 }
